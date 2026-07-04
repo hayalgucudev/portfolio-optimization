@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+.venv/
+
+# Data (raw data can be large — we usually don't commit it)
+data/raw/
+
+# OS / editor junk
+.DS_Store
+.vscode/*
+!.vscode/settings.json
