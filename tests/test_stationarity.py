@@ -14,7 +14,7 @@ def test_adf_detects_stationary_series():
     np.random.seed(42)
     stationary_series = pd.Series(np.random.normal(0, 1, 500))
     result = adf_test(stationary_series)
-    assert result["is_stationary"] is True
+    assert result["is_stationary"] == True
 
 
 def test_adf_detects_nonstationary_series():
@@ -22,4 +22,4 @@ def test_adf_detects_nonstationary_series():
     np.random.seed(42)
     random_walk = pd.Series(np.random.normal(0, 1, 500)).cumsum()
     result = adf_test(random_walk)
-    assert result["is_stationary"] is False
+    assert result["is_stationary"] == False

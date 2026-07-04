@@ -18,8 +18,8 @@ def adf_test(series: pd.Series, significance=0.05) -> dict:
     result = adfuller(series)
 
     return {
-        "adf_statistic": result[0],
-        "p_value": result[1],
+        "adf_statistic": float(result[0]),
+        "p_value": float(result[1]),
         "critical_values": result[4],
-        "is_stationary": result[1] < significance,
+        "is_stationary": bool(result[1] < significance),
     }
